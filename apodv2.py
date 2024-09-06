@@ -10,8 +10,12 @@ url = "https://api.nasa.gov/planetary/apod?"
 keys = dict(
     api_key = "ROZpi2Du6BFMDqh2EEW9RZmzEjQ09Rk4qk7mbulk",
 )
-
-os.chdir("./data")
+# change to data folder, if its not there, make it
+try:
+    os.chdir("./data")
+except:
+    os.mkdir("./data")
+    os.chdir("./data")
 date = datetime.today().strftime('%Y-%m-%d')
 # Only make an API call if the data hasn't already been collected
 if not os.path.isfile(date+".json"):
@@ -33,7 +37,12 @@ if not os.path.isfile(date+".json"):
 else:
     with open(date+".json",'r') as data:
         response = json.loads(data.read())
-os.chdir("../photo data")
+# change to photo data folder, if its not there, make it
+try:
+    os.chdir("../photos")
+except:
+    os.mkdir("../photos")
+    os.chdir("../photos")
 # Only check for/download the image if it hasn't been downloaded
 if not os.path.isfile(response["title"]+".jpg"):
     # Uses the response's image URL to save the photo from the
