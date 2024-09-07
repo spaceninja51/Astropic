@@ -14,7 +14,7 @@ url = "https://api.nasa.gov/planetary/apod?"
 location = os.getcwd()
 
 keys = dict(
-    api_key = "ROZpi2Du6BFMDqh2EEW9RZmzEjQ09Rk4qk7mbulk",
+    api_key = "",
 )
 
 # change to data folder, if its not there, make it
