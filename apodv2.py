@@ -50,10 +50,11 @@ try:
 except:
     os.mkdir("./photos")
     os.chdir("./photos")
+filename = response["title"].replace(':','')
 # Only check for/download the image if it hasn't been downloaded
-if not os.path.isfile(response["title"]+".jpg"):
+if not os.path.isfile(filename+".jpg"):
     # Uses the response's image URL to save the photo from the
     # byte formatted answer
     photo = requests.get(response["url"]).content
-    with open(response["title"]+".jpg",'wb') as canvas:
+    with open(filename+".jpg",'wb') as canvas:
         canvas.write(photo)
