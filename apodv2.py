@@ -51,6 +51,7 @@ except:
     os.mkdir("./photos")
     os.chdir("./photos")
 filename = response["title"].replace(':','')
+filename = filename.replace(' ','-')
 # Only check for/download the image if it hasn't been downloaded
 if not os.path.isfile(filename+".jpg"):
     # Uses the response's image URL to save the photo from the
