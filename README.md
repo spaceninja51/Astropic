@@ -1,5 +1,5 @@
 # What is This?
-Ideally, it will become a basic website that will allow a user to view, download, and bookmark entries in a database built from data collected from NASA's Astronomy Photo of the Day API.
+Ideally, it will become a basic website that will allow a user to view, download, and bookmark entries in a database built up of data collected from NASA's Astronomy Photo of the Day API.
 
 Astropic is a project I came up with mainly as a way to learn python, some networking, and web server hosting. I mostly want to keep a repo just to keep track of this learning. Honestly sorta hoping I'm the only one to see this, but feel free to check it out if you're here! :)
 # Implemented
