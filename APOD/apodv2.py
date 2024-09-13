@@ -40,6 +40,8 @@ if not os.path.isfile(date+".json"):
     response = json.loads(call.text)
     allowance = {"Remaining Calls":headers._store['x-ratelimit-remaining'][1]}
     response.update(allowance)
+    response["title"] = response["title"].replace(':','')
+    response["title"] = response["title"].replace(' ','-')
     # Writes the json response to a file named using the date
     # of the response
     with open(date+".json",'w') as pad:
@@ -56,14 +58,13 @@ except:
     os.chdir("./photos")
     print("photos folder created...")
 # Windows >:(
-filename = response["title"].replace(':','')
-filename = filename.replace(' ','-')
+filename = response["title"]
 # Only check for/download the image if it hasn't been downloaded
 if not os.path.isfile(filename+".jpg"):
     
     # Uses the response's image URL to save the photo from the
     # byte formatted answer
-    photo = requests.get(response["url"]).content
+    photo = requests.get(response["hdurl"]).content
     with open(filename+".jpg",'wb') as canvas:
         canvas.write(photo)
     print(date+"'s photo saved!")
