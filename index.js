@@ -8,7 +8,7 @@ document.getElementById("constP").textContent = constant
 /* Window prompt is easiser
 HTML Textbox looks/works better */
 // Changes the heading to the inputted text
-document.getElementById("mySubmit").onr = function(){
+document.getElementById("mySubmit").onclick = function(){
     input = document.getElementById("myText").value
-    document.getElementById("myH1").textContent = `${input}`
+    document.getElementById("boxOut").textContent = `${input}`
 }
