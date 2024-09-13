@@ -10,10 +10,10 @@ from datetime import datetime
 date = datetime.today().strftime('%Y-%m-%d')
 # change to data folder, if its not there, make it
 try:
-    os.chdir("./APOD/data")
+    os.chdir("APOD/data")
 except:
-    os.mkdir("./APOD/data")
-    os.chdir("./APOD/data")
+    os.mkdir("APOD/data")
+    os.chdir("APOD/data")
     print("data folder created...")
 # Only make an API call if the data hasn't already been collected
 if not os.path.isfile(date+".json"):
@@ -21,7 +21,7 @@ if not os.path.isfile(date+".json"):
     url = "https://api.nasa.gov/planetary/apod?"
     # Reads the API key from a text file named api_key.txt in 
     # a folder named secrets for the api key
-    with open("APOD/secrets/api_key.txt",'rt') as key:
+    with open("../secrets/api_key.txt",'rt') as key:
         """
         input the desired request keys, matching the dict key to the
         api url segment

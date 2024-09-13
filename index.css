@@ -1,8 +1,6 @@
 body {
     background-color: black;
     color:white;
-    /* em is a multiplier for font size, px is set */
     font-size: 2em;
     font-family:monospace;
 }
-
