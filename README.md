@@ -17,5 +17,3 @@ Astropic is a project I came up with mainly as a way to learn python, some netwo
 [ ] Option to bookmark the day
 [ ] Gallery of the last week (month?)
 [ ] Favorites menu
-# Vault links
-[[NASA apod API]]
