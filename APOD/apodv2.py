@@ -1,31 +1,34 @@
 # Enables file system interaction
-import os
+import os.path
 # Allows json manipulation
 import json
 # Enables API requests
 import requests
 # For checking file existance by name
 from datetime import datetime
-# Input url and request keys, matching the dict key to the
-# api url segment
-url = "https://api.nasa.gov/planetary/apod?"
-keys = dict(
-    api_key = "",
-)
-# Reads the API key from a text file named api_key.txt in 
-# a folder named secrets
-with open("Astropic/secrets/api_key.txt",'rt') as key:
-    keys["api_key"] = key.read()
-# change to data folder, if its not there, make it
-location = os.getcwd()
-try:
-    os.chdir(location+"/Astropic/data")
-except:
-    os.mkdir(location+"/Astropic/data")
-    os.chdir(location+"/Astropic/data")
-# Only make an API call if the data hasn't already been collected
+# date for checking file existance/naming
 date = datetime.today().strftime('%Y-%m-%d')
+# change to data folder, if its not there, make it
+try:
+    os.chdir("./APOD/data")
+except:
+    os.mkdir("./APOD/data")
+    os.chdir("./APOD/data")
+    print("data folder created...")
+# Only make an API call if the data hasn't already been collected
 if not os.path.isfile(date+".json"):
+    # Input url and 
+    url = "https://api.nasa.gov/planetary/apod?"
+    # Reads the API key from a text file named api_key.txt in 
+    # a folder named secrets for the api key
+    with open("APOD/secrets/api_key.txt",'rt') as key:
+        """
+        input the desired request keys, matching the dict key to the
+        api url segment
+        """
+        keys = dict(
+            api_key = key.read(),
+        )
     # Initial call, returns a Response object from the given url.
     # If keys are provided, builds them into the url
     call = requests.get(url,keys)
@@ -44,18 +47,25 @@ if not os.path.isfile(date+".json"):
 else:
     with open(date+".json",'r') as data:
         response = json.loads(data.read())
+    print("Aleady have today's JSON!")
 # change to photo subfolder, if its not there, make it
 try:
     os.chdir("./photos")
 except:
     os.mkdir("./photos")
     os.chdir("./photos")
+    print("photos folder created...")
+# Windows >:(
 filename = response["title"].replace(':','')
 filename = filename.replace(' ','-')
 # Only check for/download the image if it hasn't been downloaded
 if not os.path.isfile(filename+".jpg"):
+    
     # Uses the response's image URL to save the photo from the
     # byte formatted answer
     photo = requests.get(response["url"]).content
     with open(filename+".jpg",'wb') as canvas:
         canvas.write(photo)
+    print(date+"'s photo saved!")
+else:
+    print(date+"'s photo is already saved!")
