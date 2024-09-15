@@ -3,6 +3,7 @@ body {
     color:white;
     font-size: 2em;
     font-family:monospace;
+    margin:1.5em;
 }
 .navMenu {
     a {
@@ -27,5 +28,4 @@ body {
     padding-left:0.25em;
     padding-top:0.25em;
     padding-bottom:0.25em;
-    margin:1.5em;
 }
