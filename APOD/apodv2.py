@@ -21,7 +21,7 @@ if not os.path.isfile(date+".json"):
     url = "https://api.nasa.gov/planetary/apod?"
     # Reads the API key from a text file named api_key.txt in 
     # a folder named secrets for the api key
-    with open("../secrets/api_key.txt",'rt') as key:
+    with open("../data/secrets/api_key.txt",'rt') as key:
         """
         input the desired request keys, matching the dict key to the
         api url segment

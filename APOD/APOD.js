@@ -19,7 +19,7 @@ function updataApod() {
     const photo = document.getElementById("apod");
     const explanation = document.getElementById("apodExplanation");
     // Reads the day's json file, setting the appropriate element values
-    fetch(`APOD/data/${todayString('-')}.json`)
+    fetch(`data/${todayString('-')}.json`)
         .then(res => res.json())
         .then(res => {
             const picData = res;
