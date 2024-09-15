@@ -1,0 +1,10 @@
+input, button {
+    color: brown;
+    background: round;
+    border: darkslategray;
+    border-style: solid;
+    border-width: thin;
+}
+p, label , h4 {
+    color:brown;
+}

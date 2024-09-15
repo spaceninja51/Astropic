@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Header-->
 <head>
-    <!--Metadata-->
     <meta charset="UTF-8",name="viewport"content="width=device-width",initial-scale="1.0">
-    <!---Name in the tab-->
     <title>APOD</title>
-    <!---index.css is the stylesheet for this document, relationship
-    is stylesheet and the hypertext reference is index.css-->
     <link rel="stylesheet" href="/darkish.css">
+    <link rel="stylesheet" href="APOD.css">
 </head>
-<!--Body-->
 <body>
     <h1>APOD</h1>
-    <a href="/sandbox/sandbox.html">To sandbox</a>
-    <h2 id="apodTitle"></h2>
-    <image id="apod"></image>
-    <p id="apodExplanation"></p>
+    
+    <div class="navMenu" id="APODMenu">
+        <a href="/home.html">Home</a><br>
+        <a href="/sandbox/sandbox.html">To sandbox</a>
+    </div>
+
+    <div class="photoEntry" id="dailyAPOD">
+        <h2 id="apodTitle"></h2>
+        <image id="apod"></image>
+        <p id="apodExplanation"></p>
+    </div>
+
     <script src="APOD.js"></script>
 </body>
-<!--End-->
 </html>
