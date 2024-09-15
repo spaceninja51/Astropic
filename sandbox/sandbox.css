@@ -8,3 +8,7 @@ input, button {
 p, label , h4 {
     color:brown;
 }
+button:hover {
+    color: red;
+    background-color: gray;
+}

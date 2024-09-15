@@ -6,14 +6,22 @@ body {
     margin:1.5em;
 }
 .navMenu {
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        display:inline-block;
+        overflow:hidden;
+    }
+    li {
+        float:left;
+    }
     a {
         padding-left:1em;
         padding-right:1em;
     }
     a:link, a:visited {
-        background-color: darkred;
         color:white;
-        display:inline-block;
         text-decoration:none;
     }
     a:hover {
@@ -27,5 +35,4 @@ body {
     background-color: darkred;
     padding-left:0.25em;
     padding-top:0.25em;
-    padding-bottom:0.25em;
 }
