@@ -1,12 +1,12 @@
+body {
+    color:brown;
+}
 input, button {
-    color: brown;
+    color:darkred;
     background: round;
     border: darkslategray;
     border-style: solid;
     border-width: thin;
-}
-p, label , h4 {
-    color:brown;
 }
 button:hover {
     color: red;

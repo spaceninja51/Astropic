@@ -4,6 +4,12 @@ body {
     font-size: 2em;
     font-family:monospace;
     margin:1.5em;
+    h1 {
+        color:darkred;
+    }
+    h2 {
+        color:brown;
+    }
 }
 .navMenu {
     ul {
@@ -19,6 +25,8 @@ body {
     a {
         padding-left:1em;
         padding-right:1em;
+        transition: font-weight 0.25s;
+        transition: background-color 0.25s;
     }
     a:link, a:visited {
         color:white;
@@ -26,11 +34,11 @@ body {
     }
     a:hover {
         background-color: red;
+        font-weight:bold;
     }
     #currentPage {
         background-color: black;
         color: darkred;
-        border-color: white;
     }
     background-color: darkred;
     padding-left:0.25em;
