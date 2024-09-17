@@ -1,46 +1,73 @@
+header {
+    #siteName {
+        color:red;
+        font-family:monospace;
+        display:inline;
+        padding-left:0.4em;
+        padding-right:0.4em;
+        border-style:dashed dotted hidden dotted;
+        border-color:rgb(147,0,0);
+        margin-bottom:0.25em;
+    }
+    /* horizontal menu bar styling */
+    nav.horiMenu {
+        background-color: rgb(117, 0, 0);
+        border-style: outset;
+        border-width:0.4em;
+        border-color: rgb(147,0,0);
+        padding-bottom:0.5em;
+        margin-top:0;
+        ul {
+            list-style-type: none;
+            display:inline;
+            overflow:hidden;
+            li {
+                float:left;
+                margin-top:0.25em;
+                margin-left:0.125em;
+            }
+            li.right {
+                float:right;
+            }
+            a {
+                padding-left:0.5em;
+                padding-right:0.5em;
+            }
+            a:link, a:visited {
+                color:white;
+                text-decoration:none;
+                border-style:outset;
+                border-color:rgb(157,0,0);
+            }
+            a:hover {
+                color:red;
+                background-color: black;
+                border-style:inset;
+                transition: .25s;
+            }
+            a.active {
+                background-color: black;
+                color: white;
+                border-style:inset;
+            }
+        }
+    }
+}
 body {
     background-color: black;
     color:white;
     font-size: 2em;
     font-family:monospace;
-    margin:1.5em;
+    margin-left:20%;
+    margin-right:20%;
     h1 {
-        color:darkred;
+        color:red;
+        font-weight:bold;
     }
     h2 {
         color:brown;
     }
 }
-.navMenu {
-    ul {
-        list-style-type: none;
-        margin:0;
-        padding:0;
-        display:inline-block;
-        overflow:hidden;
-    }
-    li {
-        float:left;
-    }
-    a {
-        padding-left:1em;
-        padding-right:1em;
-        transition: font-weight 0.25s;
-        transition: background-color 0.25s;
-    }
-    a:link, a:visited {
-        color:white;
-        text-decoration:none;
-    }
-    a:hover {
-        background-color: red;
-        font-weight:bold;
-    }
-    #currentPage {
-        background-color: black;
-        color: darkred;
-    }
-    background-color: darkred;
-    padding-left:0.25em;
-    padding-top:0.25em;
+div.photoEntry {
+    text-align:center;
 }
