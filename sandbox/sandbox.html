@@ -6,24 +6,38 @@
     <meta charset="UTF-8",name="viewport"content="width=device-width",initial-scale="1.0">
     <!---Name in the tab-->
     <title>Sandbox</title>
-    <!---index.css is the stylesheet for this document, relationship
-    is stylesheet and the hypertext reference is darkish.css-->
-    <link rel="stylesheet" href="/darkish.css">
+    <!---Only sandbox.css is referenced here to allow for testing-->
     <link rel="stylesheet" href="sandbox.css">
+    <style>
+        div.photoEntry {
+            border-style: inset inset outset outset;
+        }
+    </style>
 </head>
+<!--Menu Bar-->
+<header>
+    <h3 id="siteName">Astropic</h3>
+    <nav class="horiMenu">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/APOD/APOD.html">APOD</a></li>
+            <li><a class="active" href="/sandbox/sandbox.html">sandbox</a></li>
+            <li class="right"><a href="https://github.com/spaceninja51/Astropic" target="_blank">Github</a></li>
+        </ul>
+    </nav>
+</header> 
+<!--Daily entry pane-->
+
+<div class="photoEntry">
+    <section>Photo Entry</section>
+    <figure><img src="https://picsum.photos/700"></figure>
+    <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempora enim quas ducimus numquam explicabo quae velit asperiores adipisci vel! Quidem necessitatibus veniam voluptate quasi. Soluta repudiandae officiis accusamus earum.</figcaption>
+</div>
 <!--Body-->
 <body>
-    <div class="navMenu">
-        <ul>
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/APOD/APOD.html">APOD</a></li>
-            <li><a id="currentPage" href="/sandbox/sandbox.html">sandbox</a></li>
-            <li style="float:right"><a href="https://github.com/spaceninja51">My Github</a></li>
-        </ul>
-    </div>
-    <h1>Sandbox</h1>
-    <div>
-        <p id="boxOut">What do you want this to say?</p>
+    <details id="playground">
+        <summary>Playground</summary>
+        <p id="boxOut">Type in the box and click submit to change this text.</p>
         <label>Input:</label>
         <input id="myText">
         <button id="mySubmit">Submit</button>
@@ -31,7 +45,7 @@
         <!--Set in the sandbox.js script-->
         <p id="variableP"></p>
         <p id="constP"></p>
-    </div>
+    </details>
     <!--Allows a script to run on this block-->
     <script src="sandbox.js"></script>
 </body>
