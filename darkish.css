@@ -54,22 +54,6 @@ header {
         }
     }
 }
-body {
-    background-color: black;
-    color:white;
-    font-size: 2em;
-    font-family:monospace;
-    margin-left:20%;
-    margin-right:20%;
-    h1 {
-        color:red;
-        text-align: left;
-        margin:1%;
-    }
-    h2 {
-        color:brown;
-    }
-}
 div.photoEntry {
     text-align:center;
     color:#ffb700;
@@ -87,14 +71,12 @@ div.photoEntry {
         font-family: 'Courier New', Courier;
         font-weight: bold;
     }
-    figure {
-        img {
-            width: 60%;
-            height:60%;
-            background-color:white;
-            padding:0.5em;
-            padding-bottom:2em;
-        }
+    figure > img {
+        width: 60%;
+        height:60%;
+        background-color:white;
+        padding:0.5em;
+        padding-bottom:2em;
     }
     figcaption {
         font-family:'Times New Roman', Times, serif;
@@ -103,5 +85,21 @@ div.photoEntry {
         padding-right:5%;
         text-align:justify;
         font-size:60%;
+    }
+}
+body {
+    background-color: black;
+    color:white;
+    font-size: 2em;
+    font-family:monospace;
+    margin-left:20%;
+    margin-right:20%;
+    h1 {
+        color:red;
+        text-align: left;
+        margin:1%;
+    }
+    h2 {
+        color:brown;
     }
 }
