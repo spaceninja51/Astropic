@@ -28,6 +28,7 @@ header {
             }
             li.right {
                 float:right;
+                margin-right:0.125em;
             }
             a {
                 padding-left:0.5em;

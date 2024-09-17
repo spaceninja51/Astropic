@@ -1,8 +1,16 @@
-body {
-    color:brown;
+/*
+testing for darkish.css
+*/
+
+/*
+Sandbox only
+*/
+summary {
+    margin-top:0;
+    margin-bottom:5%;
 }
 input, button {
-    color:darkred;
+    color:rgb(117, 0, 0);
     background: round;
     border: darkslategray;
     border-style: solid;
@@ -10,5 +18,5 @@ input, button {
 }
 button:hover {
     color: red;
-    background-color: gray;
+    background-color: rgb(30,30,30);
 }
