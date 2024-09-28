@@ -7,12 +7,8 @@
     <!---Name in the tab-->
     <title>Sandbox</title>
     <!---Only sandbox.css is referenced here to allow for testing-->
-    <link rel="stylesheet" href="sandbox.css">
-    <style>
-        div.photoEntry {
-            border-style: inset inset outset outset;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheets/sandbox.css">
+    <link rel="stylesheet" href="/darkish.css">
 </head>
 <!--Menu Bar-->
 <header>
@@ -26,28 +22,47 @@
         </ul>
     </nav>
 </header> 
-<!--Daily entry pane-->
 
-<div class="photoEntry">
-    <section>Photo Entry</section>
-    <figure><img src="https://picsum.photos/700"></figure>
-    <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempora enim quas ducimus numquam explicabo quae velit asperiores adipisci vel! Quidem necessitatibus veniam voluptate quasi. Soluta repudiandae officiis accusamus earum.</figcaption>
+<!--Calculator-->
+<div id="calculator">
+    <input id="display" readonly>
+    <div id="keys">
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">/</button>
+        <button onclick="appendToDisplay('+')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="clearDisplay()">C</button>
+    </div>
 </div>
 <!--Body-->
 <body>
     <details id="playground">
-        <summary>Playground</summary>
+        <summary>User Defined Variable</summary>
         <p id="boxOut">Type in the box and click submit to change this text.</p>
         <label>Input:</label>
         <input id="myText">
         <button id="mySubmit">Submit</button>
-        <h4>Examples of displaying variables</h4>
-        <!--Set in the sandbox.js script-->
-        <p id="variableP"></p>
-        <p id="constP"></p>
+        <details>
+            <summary>Displayed variables</summary>
+            <h4>Examples of displaying variables</h4>
+            <!--Set in the sandbox.js script-->
+            <p id="variableP"></p>
+            <p id="constP"></p>
+        </details>
     </details>
     <!--Allows a script to run on this block-->
-    <script src="sandbox.js"></script>
+    <script src="scripts/variables.js"></script>
 </body>
 <!--End-->
 </html>
