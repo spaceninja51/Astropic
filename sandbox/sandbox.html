@@ -6,9 +6,9 @@
     <meta charset="UTF-8",name="viewport"content="width=device-width",initial-scale="1.0">
     <!---Name in the tab-->
     <title>Sandbox</title>
-    <!---Only sandbox.css is referenced here to allow for testing-->
-    <link rel="stylesheet" href="stylesheets/sandbox.css">
+    
     <link rel="stylesheet" href="/darkish.css">
+    <link rel="stylesheet" href="/sandbox/stylesheets/calculator.css">
 </head>
 <!--Menu Bar-->
 <header>
@@ -23,36 +23,38 @@
     </nav>
 </header> 
 
-<!--Calculator-->
-<div id="calculator">
-    <input id="display" readonly>
-    <div id="keys">
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('+')">/</button>
-        <button onclick="appendToDisplay('+')">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="clearDisplay()">C</button>
-    </div>
-</div>
-<!--Body-->
 <body>
+    <!--Calculator-->
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+            <button class="OpKey" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="OpKey" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="OpKey" onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="OpKey" onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button class="OpKey" onclick="clearDisplay()">C</button>
+        </div>
+        <script src="/sandbox/scripts/calculator.js"></script>
+    </div>
+    <br>
     <details id="playground">
-        <summary>User Defined Variable</summary>
+        <summary>User Defined Variables Example</summary>
         <p id="boxOut">Type in the box and click submit to change this text.</p>
         <label>Input:</label>
         <input id="myText">
-        <button id="mySubmit">Submit</button>
+        <button style="background-color: white;" id="mySubmit">Submit</button>
         <details>
             <summary>Displayed variables</summary>
             <h4>Examples of displaying variables</h4>
